@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    div{
+        width:auto;
+    }
+    .header{
+        display:flex;
+        margin-top:3px;
+        gap:20px;
+        box-shadow:0px 4px 8px rgb(80, 77, 77);
+        top:0px;
+        position: fixed;
+        width:1320px;
+        background-color: #ddd;
+    }
+    
+    .left h3{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-top:10px;
+        font-size:40px;
+        margin-left:20px;
+       
+    }
+    .right ul{
+        display:flex;
+        gap:25px;
+        margin-top:25px;
+        margin-left: 650px;
+        list-style: none;
+       
+    }
+    .right ul li a{
+        text-decoration: none;
+        font-size: 20px;
+        color:black;
+    }
+    .right a:hover{
+        color:blue;
+    }
+
+    .right a:active{
+        background-color: rgb(244, 243, 245);
+    }
+    .about{
+        display:flex;
+        margin-top:100px;
+        gap:40px;
+        height:580px;
+        width:1320px;
+    }
+    .about img{
+        height:500px;
+        width:500px;
+    }
+    .aboutright{
+        text-align:center;
+        padding-top: 20px;
+        box-shadow:0px 2px 4px 2px rgb(77, 66, 66);
+        background-color:rgb(244, 243, 245);
+
+    }
+    .aboutbottom{
+        padding-top:40px;
+    }
+    .aboutright h2{
+        text-align:center;
+        font-size:40px;
+        text-decoration:underline;
+    }
+    
+    .aboutright h3{
+        text-align:left;
+        font-size:30px;
+        padding-top:10px;
+        padding-left:10px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .aboutright p{
+        text-align: left;
+        font-size:25px;
+        padding-left:10px;
+    }
+    .skill{
+        text-align:center;
+        margin-top: 50px;
+        box-shadow:0px 2px 4px 2px rgb(77, 66, 66);
+        background-color:rgb(226, 226, 248);
+        width:1320px;
+        height:auto;
+    }
+    .skill h2{
+        text-align:center;
+        font-size:40px;
+        text-decoration:underline;
+        padding-top:50px;
+    }
+    .skill h3{
+        text-align:left;
+        font-size:30px;
+        padding-top:10px;
+        padding-left:10px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration:underline;
+    }
+    .skill p{
+        text-align: left;
+        font-size:25px;
+        padding-left:10px;
+    }
+    .container{
+        box-sizing:box-border;
+        border: 1px solid rgb(110, 108, 108);
+        border-radius: 10px;
+        width:700px;
+        background: #ddd;
+        color:white;
+    }
+    .skillshtml{
+        width:95%;
+        background-color: rgb(32, 84, 197);
+        border-radius: 10px;
+    }
+    .skillsCSS{
+        width:90%;
+        background-color:rgb(32, 84, 197);
+        border-radius: 10px;
+    }
+    .skillsjs{
+        width:60%;
+        background-color: rgb(32, 84, 197);
+        border-radius: 10px;
+    }
+    .skillsdb{
+        width:70%;
+        background-color: rgb(32, 84, 197);
+        border-radius: 10px;
+    }
+    .skillspy{
+        width:80%;
+        background-color: rgb(32, 84, 197);
+        border-radius: 10px;
+    }
+    .skillsjava{
+        width:40%;
+        background-color: rgb(32, 84, 197);
+        border-radius: 10px;
+    }
+    .project{
+        text-align:center;
+        margin-top: 70px;
+        box-shadow:0px 2px 4px 2px rgb(77, 66, 66);
+        background-color:rgb(238, 225, 253);
+        width:1320px;
+        height:auto;
+    }
+    .project h2{
+        text-align:center;
+        font-size:40px;
+        text-decoration:underline;
+       
+    }
+    .project h3{
+        text-align:left;
+        font-size:30px;
+        padding-top:10px;
+        padding-left:10px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       
+    }
+    .project p{
+        text-align: left;
+        font-size:25px;
+        padding-left:10px;
+    
+    }
+    .project1{
+        display:block;
+    }
+    .project1left{
+        text-align:center;
+        padding-top: 20px;
+        box-shadow:0px 2px 4px 2px rgb(32, 31, 36);
+        background-color:white;
+        margin:30px;
+        padding:30px;
+
+    }
+    .project1right{
+        text-align:center;
+        padding-top: 20px;
+        box-shadow:0px 2px 4px 2px rgb(39, 33, 41);
+        background-color:white;
+        margin:30px;
+        padding:30px;
+
+    }
+    .resume{
+        text-align:center;
+        margin-top: 70px;
+        box-shadow:0px 2px 4px 2px rgb(77, 66, 66);
+        background-color:rgb(238, 225, 253);
+        width:1320px;
+        height:600px;
+        padding-top: 50px;
+    }
+    .resume h2{
+        font-size: 40px;
+    }
+    .resume pre{
+        font-size: 30px;
+        padding-top:50px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .resume button{
+        text-decoration: none;
+        color:darkblue;
+        background-color: white;
+        font-size:25px;
+    }
+    .resume button a{
+        text-decoration: none;
+    }
+    .resume button a:hover{
+        text-decoration:underline;
+    }
+    
+    
+    .footer{
+        bottom:0px;
+        margin-top:30px;
+        height:10%;
+        width:1320px;
+        background-color:rgb(44, 37, 37);
+        color:white;
+        font-size: 20px;
+    }
+    .contact h2{
+        font-size: 40px;
+    }
+    .copy{
+        padding-top:10px;
+    }
+    .icon{
+        padding-top:50px;
+        display:flex;
+        gap:10px;
+        padding-left:7px;
+    }
+    
+</style>
+<body>
+    <div class="header">
+        <div class="left">
+            <h3>Hardik P.</h3> 
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <a name="about"></a>
+    <div class="about">
+        <div class="aboutleft">
+        <img src="th.jpg"/>
+        </div>
+        <div class="aboutright">
+            <h2>About Myself</h2>
+            <div class="aboutbottom">
+            
+            <p>I am an engineering student pursuing my education from college in Gujarat,India.My Objective as an engineering student  is to secure a suitable role as a trainee Engineer in a reputable company where I can develop my skills ans gain Experience while contributing to the growth of the organization</p>
+            <h3>Knowledge</h3>
+            <p> Basic Knowledge about datatypes, operators, Object-oriented programming in Python.</p>
+            <p>Basic knowledge about Java programming language.</p>
+            <p>Basic Knowledge about SQL queries</p>
+            <p>HTML,CSS,JAVASCRIPT</p>
+            <h3>Proficiency</h3>
+            <p>Quick learning Skills</p>
+            <p>Effective Communication</p>
+            <p>Teamwork</p>
+            </div>
+        </div>
+    </div>
+    <a name="skill"></a>
+    <div class="skill">
+        <h2>Skills</h2>
+        <h3>Skills</h3>
+        <p>HTML</p>
+        <div class="container">
+            <div class="skillshtml">95%</div>
+        </div>
+        <p>CSS</p>
+        <div class="container">
+            <div class="skillsCSS">90%</div>
+        </div>
+        <p>JavaScript</p>
+        <div class="container">
+            <div class="skillsjs">60%</div>
+        </div>
+        <p>Database Management(SQL queries)</p>
+        <div class="container">
+            <div class="skillsdb">70%</div>
+        </div>
+        <p> Basics of Python</p>
+        <div class="container">
+            <div class="skillspy">80%</div>
+        </div>
+        <p>Core Java</p>
+        <div class="container">
+            <div class="skillsjava">40%</div>
+        </div>
+        <h3>Other Skills</h3>
+        <p>Playing Guitar</p>
+        <p>Sketching</p>
+        <p>Drawing</p>
+        <p>Reading</p>
+        <p>Quick learning Skills</p>
+        <p>Effective Communication</p>
+        <p>Teamwork</p>
+       
+    </div>
+    <a name="project"></a>
+    <div class="project">
+        <h2>Projects</h2>
+        <h3>Web Technology(WT)</h3>
+        <p>Web Technology:Made a website consisting of historical maps and locations using HTML,CSS and Javascript</p>
+        <h3>Innovation and Design Thinking(IDT)</h3>
+        <p>Innovation and Design Thinking:Worked on a real-life problem statement as a team member</p>
+        <div class="project1">
+        <div class="project1left">
+            <h3>Web Technology(Website)</h3>
+            <details>
+                <summary style="font-size: 20px; color:blue; text-decoration:underline;">Read more</summary>
+                <h3><u>Web Technology(WT)</u></h3>
+                <p>Web Technology:Made a website that consists of all the historical maps and their locations  by using HTML,CSS and Javascript</p>
+            <img src="im1.jpeg" width="300px" height="300px"/>
+            <img src="im2.jpeg" width="300px" height="300px"/>
+            <img src="im3.jpeg" width="300px" height="300px"/>
+            <img src="im4.jpeg" width="300px" height="300px"/>
+            <img src="im5.jpeg" width="300px" height="300px"/>
+            </details>
+           
+        </div>
+        
+        <div class="project1right">
+            <h3>Innovation and Design Thinking(IDT)</h3>
+            <details>
+                <summary style="font-size: 20px; color:blue; text-decoration:underline;">Read more</summary>
+                <h3><u>Innovation and Design thinking(IDT)</u></h3>
+                <p>Innovation and Design Thinking(Teamwork Project):Worked on a real-life problem statement by bringing a solution to that problem statement as a part of that team.</p><br>
+                <p>(Yet to be implemented.)</p>
+            </details>
+        </div>
+        </div>
+    </div>
+    <a name="resume"></a>
+    <div class="resume">
+        <h2><u>Resume</u></h2>
+        <pre>I hereby provide my resume for your reference.
+        Click on the download button below to download my resume.</pre>
+        <br/>
+        <br/>
+        <button value="Download"><a href="RESUME (1).pdf">Download</a></button>
+    </div>
+   
+
+   
+    <div class="footer">
+        <a name="contact"></a>
+        <div class="contact">
+            <h2>Contact</h2>
+            <h3>Email Address:</h3>
+            <p>abc@gmail.com</p>
+            <h3>Email Address:</h3>
+            <p>123456789</p>
+        </div>
+        <div class="icon">
+            <img src="ins.webp" alt="" width="20px" height="20px">
+            <img src="l.webp" alt="" width="20px" height="20px">
+            <img src="tw.webp" alt="" width="20px" height="20px">
+            <img src="f.webp" alt="" width="20px" height="20px">
+            <img src="y.webp" alt="" width="20px" height="20px">
+        </div>
+        <div class="copy">&copy;2024 by Hardik P.</div>
+        
+    </div>
+    
+</body>
+</html>
